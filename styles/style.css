@@ -1,0 +1,163 @@
+body{
+    margin:0px;
+    padding:0px;
+}
+
+.container{
+    height:100%;
+    width:100%;
+    overflow: hidden;
+    background-color:black;
+/*    background-image: url(images/background_img2.png)*/
+}
+
+img{
+    max-width: 100%;
+    max-height: auto;
+    overflow: hidden;
+}
+
+.top-bar{
+    height:10%;
+    width:100%;
+    position:fixed;
+/*    background-color:green;*/
+    display:flex;
+}
+
+.button{
+    box-sizing: border-box;
+    height: 100%;
+    width : 7%;
+    text-align: center;
+/*    background-color: red;*/
+    color:#484854;
+    margin: 0px 10px;
+    padding-top: 1.5%;
+    font-size: 30px;
+    font-family: 'Saira Extra Condensed',sans-serif;
+    text-decoration: none;
+}
+
+.button:after{
+    position:absolute;
+    content:'';
+    height:0;
+    width:0;
+    border-bottom: 8px solid white;
+    bottom:0;
+    left:0;
+    box-sizing: border-box;
+}
+
+.button:hover :after{
+    height:100%;
+    width:100%;
+    border-bottom: 8px solid white;
+    transition: width 2s linear, height 2s linear;
+}
+.button:hover,.currentb{
+    color:white;
+    font-size: 32px;
+    cursor: pointer;
+}
+
+.leftbutton{
+    display:block;
+    text-align: center;
+    box-sizing: border-box;
+    color: white;
+    background-color: black;
+    position: absolute;
+    right:0;
+    width: min-content;
+    border-radius: 30px;
+    border: 1px solid white;
+    background-clip: padding-box;
+    height: min-content;
+    margin: 1.3em;
+    padding: 0.1em 0.3em 0.1em 0.3em;
+    font-size: 1.3em;
+    font-family: 'Helvetica',sans-serif;
+}
+
+.leftbutton:hover, .currentlb{
+    cursor: pointer;
+    background-color: white;
+    color: black;
+
+}
+
+.leftbutton2{
+    right: 120px;
+}
+
+/*for mobile resolutions*/
+@media only screen and (max-width: 600px) {
+
+    .hero_text{
+        font-size:48px;
+    }
+
+    .button{
+        font-size:16px;
+    }
+
+    .button:hover{
+        font-size: 18px;
+    }
+
+    img{
+        max-width: 200%;
+        transform: translate(-25%,25%);
+    }
+
+}
+
+/* for 1440p or similar resolution monitors*/
+@media only screen and (min-width: 2000px){
+  img{
+      width:100vw;
+      max-width: none;
+      max-height: none;
+      overflow: hidden;
+  }
+
+  .hero_text{
+    font-size:150px;
+  }
+
+  .button{
+      font-size:50px;
+  }
+
+  .button:hover{
+      font-size: 60px;
+  }
+
+
+}
+
+/* for 4k or similar resolution monitors*/
+@media only screen and (min-width: 3000px){
+  img{
+      width:100vw;
+      max-width: none;
+      max-height: none;
+      overflow: hidden;
+  }
+
+  .hero_text{
+    font-size:250px;
+  }
+
+  .button{
+      font-size:90px;
+  }
+
+  .button:hover{
+      font-size: 100px;
+  }
+
+
+}
